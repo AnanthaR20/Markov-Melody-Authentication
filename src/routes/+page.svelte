@@ -287,8 +287,7 @@
 			The sequence at the top of the screen <strong>is the melody</strong> as a password! At each
 			note, when the melody goes up, tap "U" and when it goes down tap "D".
 			<br />
-			<strong>"Play Audio"</strong> & <strong>tap along with the song</strong> to practice! When you
-			feel ready for the test, hit 'enter'.
+			<strong>"Play Audio"</strong> & <strong>tap along with the song</strong> to practice! When you feel ready for the test, hit 'enter'.
 		</h2>
 	{:else if showSongEntryPage}
 		<h2 style="font-size:1.2em">
