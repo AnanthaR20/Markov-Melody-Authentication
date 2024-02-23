@@ -14,14 +14,17 @@ import B3 from "$lib/audio/B3.mp3";   import B4 from "$lib/audio/B4.mp3";
 
 export const SONG_TO_ACTUAL_SEQ: Record<string,string> = {
     "happy_birthday" : "0010100010100010000110010",
+    "twinkle": "001111000000001100000110000000111100000000"
 }
 
 // Song - Password conversions
 export const SONG_TO_PASS: Record<string,string> = {
     "happy_birthday" : "001_0_1_0___001_0_1_0___001_0_0_0_0_110_0_1_0",
+    "twinkle":"0011110_0000000_1100000_1100000_0011110_0000000"
     
 }
 // Songname to Notes conversions
 export const SONG_TO_NOTES: Record<string,Array<string>> = {
-    "happy_birthday" : [A3,A3,B3,"_",A3,"_",D4,"_",Db4,"_","_","_",A3,A3,B3,"_",A3,"_",E4,"_",D4,"_","_","_",A3,A3,A4,"_",Gb4,"_",D4,"_",Db4,"_",B3,"_",G4,G4,Gb4,"_",D4,"_",E4,"_",D4]
+    "happy_birthday" : [A3,A3,B3,"_",A3,"_",D4,"_",Db4,"_","_","_",A3,A3,B3,"_",A3,"_",E4,"_",D4,"_","_","_",A3,A3,A4,"_",Gb4,"_",D4,"_",Db4,"_",B3,"_",G4,G4,Gb4,"_",D4,"_",E4,"_",D4],
+    "twinkle":[A3,A3,E4,E4,Gb4,Gb4,E4,"_",D4,D4,Db4,Db4,B3,B3,A3,"_",E4,E4,D4,D4,Db4,Db4,B3,"_",E4,E4,D4,D4,Db4,Db4,B3,"_",A3,A3,E4,E4,Gb4,Gb4,E4,"_",D4,D4,Db4,Db4,B3,B3,A3]
 }
