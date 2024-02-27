@@ -20,7 +20,7 @@ Happy Birthday................ DDUDUDDDUDUDDDUDDDDUUDDUD
 Kal Ho Naa Ho................. UDUDUDUUDDDDUDUUDUDUDUUDDDDUDUDUUDDUUDDUUDDUDD  
 
 ## Pro's
-+ Many people anyways passivley remember many many songs
++ Many people anyways passively remember many songs
 + Given that a user is able to differentiate pitch, with some practice converting melodies to parsons code, this could be a great way to remember long passwords
 + Onscreen, there is no need to display any of the inputs since- ideally- the sequence is not rotely memorized. Therefore:
   + Creates some reslience to Observation Shoulder Surfing Attacks
