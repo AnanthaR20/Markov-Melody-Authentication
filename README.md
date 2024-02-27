@@ -28,7 +28,7 @@ Kal Ho Naa Ho................. UDUDUDUUDDDDUDUUDUDUDUUDDDDUDUDUUDDUUDDUUDDUDD
   + Creates some resilience to Observation-based Shoulder Surfing Attacks
   + People with visual impairments can enter passwords in this way (assuming they can differentiate pitch)
 + With practice, these sequences can be entered fairly quickly for the security they may offer
-+ Using an N-gram model would allow a customizable level of security where- depending on the context- it could vary from a monogram to matching the exact sequence
++ Using an N-gram model would allow a customizable level of security where- depending on the context- it could vary from a unigram to matching the exact sequence
 
 ## Con's
 - Not everyone can mentally reproduce the relationship between pitches
@@ -57,6 +57,6 @@ Kal Ho Naa Ho................. UDUDUDUUDDDDUDUUDUDUDUUDDDDUDUDUUDDUUDDUUDDUDD
 ? What is the best UI for inputting this type of password? Swiping left and right? Swiping up and down? 2 buttons?  
 
 # Verification
-The method of verification in this authentication scheme will use an N-gram language model and the CORRECT parsons code for the chosen melody to compute the probability of a valid user given some input. In this way, a user could specify how 'picky' they want their authentication scheme to be. Choosing anything from a monogram to matching the exact sequence. 
+The method of verification in this authentication scheme will use an N-gram language model and the CORRECT parsons code for the chosen melody to compute the probability of a valid user given some input. In this way, a user could specify how 'picky' they want their authentication scheme to be. Choosing anything from a unigram to matching the exact sequence. 
 
 The CORRECT parsons code for their chosen melody would just be the code they input during password set-up.
