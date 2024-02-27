@@ -1,4 +1,6 @@
 # Markov Melody Authentication
+You can **demo** this Password entry method [HERE](https://ananthar20.github.io/Markov-Melody-Authentication/)
+Using user id: 'lrs'
 
 This is a relatively novel idea for a mneumonic password, where a user maps a song or melody that they know to a long binary string using a binary variant of [Parsons Code](https://en.wikipedia.org/wiki/Parsons_code#:~:text=The%20Parsons%20code%2C%20formally%20named,of%20Tunes%20and%20Musical%20Themes.).
 
@@ -23,7 +25,7 @@ Kal Ho Naa Ho................. UDUDUDUUDDDDUDUUDUDUDUUDDDDUDUDUUDDUUDDUUDDUDD
 + Many people anyways passively remember many songs
 + Given that a user is able to differentiate pitch, with some practice converting melodies to parsons code, this could be a great way to remember long passwords
 + Onscreen, there is no need to display any of the inputs since- ideally- the sequence is not rotely memorized. Therefore:
-  + Creates some reslience to Observation Shoulder Surfing Attacks
+  + Creates some resilience to Observation-based Shoulder Surfing Attacks
   + People with visual impairments can enter passwords in this way (assuming they can differentiate pitch)
 + With practice, these sequences can be entered fairly quickly for the security they may offer
 + Using an N-gram model would allow a customizable level of security where- depending on the context- it could vary from a monogram to matching the exact sequence
@@ -34,22 +36,27 @@ Kal Ho Naa Ho................. UDUDUDUUDDDDUDUUDUDUDUUDDDDUDUDUUDDUUDDUUDDUDD
 - Using an N-gram model will demand probabilistic criteria for a valid user which may be subjective.
 
 ## Open Questions / Things to investigate
-? It's unsure how songs/melodies are distributed across binary strings. Is there enough entropy within Parsons Encodings of songs to provide security against brute force attacks?
-? On average how many songs can be represented by a given binary string?
-? Coming up with criteria for easily reproduceable passwords in this domain. Perhaps the syllable-to-note ratio could be one metric. If syllables coincide with notes it's easier to remember, but if a syllable is stretched over multiple notes it could lead to variations in user input. (i.e. vocal riffs, trills, slides, glissando, etc.)
-? Some people are not able to mentally reproduce the relationship between pitches, what is the predictor for who can and who cannot do this?
-? What proportion of people can input a password in this way?
-? To what extent can people learn how to input a password this way?
-? What is the best way to teach this method?
-? Can people improve speed and accuracy of input over time?
-? Are there other mnemonics that allow users to remember a binary string?
-? What is the best UI for inputting this type of password? Swiping left and right? Swiping up and down? 2 buttons?
+? It's unsure how songs/melodies are distributed across binary strings. Is there enough entropy within Parsons Encodings of songs to provide security against brute force attacks?  
+
+? On average how many songs can be represented by a given binary string?  
+
+? Coming up with criteria for easily reproduceable passwords in this domain. Perhaps the syllable-to-note ratio could be one metric. If syllables coincide with notes it's easier to remember, but if a syllable is stretched over multiple notes it could lead to variations in user input. (i.e. vocal riffs, trills, slides, glissando, etc.)  
+
+? Some people are not able to mentally reproduce the relationship between pitches, what is the predictor for who can and who cannot do this?  
+
+? What proportion of people can input a password in this way?  
+
+? To what extent can people learn how to input a password this way?  
+
+? What is the best way to teach this method?  
+
+? Can people improve speed and accuracy of input over time?  
+
+? Are there other mnemonics that allow users to remember a binary string?  
+
+? What is the best UI for inputting this type of password? Swiping left and right? Swiping up and down? 2 buttons?  
 
 # Verification
 The method of verification in this authentication scheme will use an N-gram language model and the CORRECT parsons code for the chosen melody to compute the probability of a valid user given some input. In this way, a user could specify how 'picky' they want their authentication scheme to be. Choosing anything from a monogram to matching the exact sequence. 
 
 The CORRECT parsons code for their chosen melody would just be the code they input during password set-up.
-
-# DEMO EXAMPLE
-You can demo this PIN entry method [HERE](https://ananthar20.github.io/Markov-Melody-Authentication/)
-Use user id: 'lrs'
