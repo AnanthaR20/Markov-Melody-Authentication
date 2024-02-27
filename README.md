@@ -5,14 +5,16 @@ This is a relatively novel idea for a mneumonic password, where a user maps a so
 To create a password, pick a song or section of a song. Using only the letters 'D' and 'U', input the song you've chosen by pressing 'D' when the note is lower than the previous note and 'U' when the note is higher than the previous note.
 
 If the note is the same pitch as the previous note press the same key ('D' or 'U') again.
-Start on either 'U' or 'D'. User's choice
+The user can choose to start on either 'U' or 'D'.
 
 *Some examples:*
+
 Twinkle Twinkle Little Star... DDUUUUDDDDDDDDUUDDDDDUUDDDDDDDUUUUDDDDDDDD
 Silent Night.................. DUDDUUDDUUDUUDUUUDDDUDDUUUDDDUDDUUUDDUUDDDUDDD
 Kookaburra Song............... DDDDUUUDDUDDDDDUUDDUDUDUUDDDUUDDDDDD
 Happy Birthday................ DDUDUDDDUDUDDDUDDDDUUDDUD
 Kal Ho Naa Ho................. UDUDUDUUDDDDUDUUDUDUDUUDDDDUDUDUUDDUUDDUUDDUDD
+
 
 ## Pro's
 + Many people anyways passivley remember many many songs
