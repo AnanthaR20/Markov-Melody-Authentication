@@ -7,14 +7,17 @@ To create a password, pick a song or section of a song. Using only the letters '
 If the note is the same pitch as the previous note press the same key ('D' or 'U') again.
 The user can choose to start on either 'U' or 'D'.
 
-*Some examples:*
+*Some examples:*  
 
-Twinkle Twinkle Little Star... DDUUUUDDDDDDDDUUDDDDDUUDDDDDDDUUUUDDDDDDDD
-Silent Night.................. DUDDUUDDUUDUUDUUUDDDUDDUUUDDDUDDUUUDDUUDDDUDDD
-Kookaburra Song............... DDDDUUUDDUDDDDDUUDDUDUDUUDDDUUDDDDDD
-Happy Birthday................ DDUDUDDDUDUDDDUDDDDUUDDUD
-Kal Ho Naa Ho................. UDUDUDUUDDDDUDUUDUDUDUUDDDDUDUDUUDDUUDDUUDDUDD
+Twinkle Twinkle Little Star... DDUUUUDDDDDDDDUUDDDDDUUDDDDDDDUUUUDDDDDDDD  
 
+Silent Night.................. DUDDUUDDUUDUUDUUUDDDUDDUUUDDDUDDUUUDDUUDDDUDDD  
+
+Kookaburra Song............... DDDDUUUDDUDDDDDUUDDUDUDUUDDDUUDDDDDD  
+
+Happy Birthday................ DDUDUDDDUDUDDDUDDDDUUDDUD  
+
+Kal Ho Naa Ho................. UDUDUDUUDDDDUDUUDUDUDUUDDDDUDUDUUDDUUDDUUDDUDD  
 
 ## Pro's
 + Many people anyways passivley remember many many songs
