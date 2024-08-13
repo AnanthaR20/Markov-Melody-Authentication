@@ -111,11 +111,12 @@
 	const USER_ID_LENGTH = 3;
 
 	function reset() {
-		showStartPage = true;
-		showSelectPage = false;
-		showTutPage = false;
-		showSongEntryPage = false;
-		showEndPage = false;
+		// showStartPage = true;
+		// showSelectPage = false;
+		// showTutPage = false;
+		// showSongEntryPage = false;
+		// showEndPage = false;
+		stageStartPage();
 		song = 'happy_birthday';
 		tempo = 400;
 		playingSong = false;
@@ -161,51 +162,53 @@
 	}
 
 	function progress_transition() {
-		if (!uid_valid) return;
-		const url = 'https://142.93.219.243.nip.io/create_instance';
-		const data = {
-			game_id: 'MM',
-			user_id: uid.toLowerCase()
-		};
-		const request = new Request(url, {
-			method: 'POST',
-			body: JSON.stringify(data),
-			headers: new Headers({
-				'Content-Type': 'application/json; charset=UTF-8'
-			})
-		});
-		fetch(request).then((create_instance_value_temp) => {
-			create_instance_value_temp.json().then((temp) => {
-				const create_instance_value = <CreateInstanceResponse>(<unknown>temp);
-				iid = create_instance_value.iid;
-				stageSelectPage();
-			});
-		});
+		// if (!uid_valid) return;
+		// const url = 'https://142.93.219.243.nip.io/create_instance';
+		// const data = {
+		// 	game_id: 'MM',
+		// 	user_id: uid.toLowerCase()
+		// };
+		// const request = new Request(url, {
+		// 	method: 'POST',
+		// 	body: JSON.stringify(data),
+		// 	headers: new Headers({
+		// 		'Content-Type': 'application/json; charset=UTF-8'
+		// 	})
+		// });
+		// fetch(request).then((create_instance_value_temp) => {
+		// 	create_instance_value_temp.json().then((temp) => {
+		// 		const create_instance_value = <CreateInstanceResponse>(<unknown>temp);
+		// 		iid = create_instance_value.iid;
+		// 		stageSelectPage();
+		// 	});
+		// });
+		stageSelectPage()
 	}
 
 	function finish_transition() {
-		const url = 'https://142.93.219.243.nip.io/update_instance';
-		const data = {
-			iid_value: iid,
-			result_pin: markov_authenticate(SONG_TO_ACTUAL_SEQ[song], userEnteredPass) ? actual_pin : '' // work around for markov melodies
-			// result_pin: userEnteredPIN
-		};
-		const request = new Request(url, {
-			method: 'POST',
-			body: JSON.stringify(data),
-			headers: new Headers({
-				'Content-Type': 'application/json; charset=UTF-8'
-			})
-		});
-		fetch(request).then((instance_response_value_temp) => {
-			instance_response_value_temp.json().then((temp) => {
-				const instance_response_value = <UpdateInstanceResponse>(<unknown>temp);
-				if (iid !== instance_response_value.iid) {
-					alert('Reached invalid state, please report bug!');
-				}
-				stageEndPage();
-			});
-		});
+		// const url = 'https://142.93.219.243.nip.io/update_instance';
+		// const data = {
+		// 	iid_value: iid,
+		// 	result_pin: markov_authenticate(SONG_TO_ACTUAL_SEQ[song], userEnteredPass) ? actual_pin : '' // work around for markov melodies
+		// 	// result_pin: userEnteredPIN
+		// };
+		// const request = new Request(url, {
+		// 	method: 'POST',
+		// 	body: JSON.stringify(data),
+		// 	headers: new Headers({
+		// 		'Content-Type': 'application/json; charset=UTF-8'
+		// 	})
+		// });
+		// fetch(request).then((instance_response_value_temp) => {
+		// 	instance_response_value_temp.json().then((temp) => {
+		// 		const instance_response_value = <UpdateInstanceResponse>(<unknown>temp);
+		// 		if (iid !== instance_response_value.iid) {
+		// 			alert('Reached invalid state, please report bug!');
+		// 		}
+		// 		stageEndPage();
+		// 	});
+		// });
+		stageEndPage();
 	}
 </script>
 
@@ -217,8 +220,8 @@
 <section>
 	{#if showStartPage}
 		<img src={banner} alt="Markov Melodies" width="100%" height="30%" />
-		<br />
-		<input
+		<br>
+		<!-- <input
 			type="text"
 			placeholder="User ID"
 			bind:value={uid}
@@ -243,8 +246,8 @@
 			{/await}
 		{/if}
 		<br />
-		<button on:click={progress_transition}>Start Game</button>
-		<!-- <StartGame on:click={()=> stageSelectPage()}/> -->
+		<button on:click={progress_transition}>Start Game</button> -->
+		<StartGame on:click={progress_transition}/>
 	{:else if showSelectPage}
 		<h1>Select a song password to learn!</h1>
 		<h2>
@@ -284,10 +287,11 @@
 			bind:playingSong
 		/>
 		<h2 style="font-size:1em;text-align:center">
-			The sequence at the top of the screen <strong>is the melody</strong> as a password! At each
-			note, when the melody goes up, tap "U" and when it goes down tap "D".
+			The sequence at the top of the screen <strong>represents the melody</strong>! When the pitch goes higher, tap "U" for up and when it goes lower tap "D" for down.
 			<br />
-			<strong>"Play Audio"</strong> & <strong>tap along with the song</strong> to practice! When you feel ready for the test, hit 'enter'.
+			<strong>"Play Audio"</strong> & <strong>tap along with the song</strong> to practice! If there are audio issues, play audio again. 
+			<br/>
+			<strong>When you feel ready</strong> for the test, <strong>hit 'enter'</strong>.
 		</h2>
 	{:else if showSongEntryPage}
 		<h2 style="font-size:1.2em">
@@ -307,12 +311,6 @@
 	{:else if showEndPage}
 		<img src={banner} alt="Markov Melodies" width="100%" height="30%" />
 		<br />
-		{#if show_pin}
-			<div style="word-wrap:normal">
-				<p style="">Entered Sequence: {binaryToDUArray(userEnteredPass)}</p>
-			</div>
-		{/if}
-		<br />
 		<!-- {#if actual_pin === userEnteredPIN} -->
 		{#if markov_authenticate(SONG_TO_ACTUAL_SEQ[song], userEnteredPass)}
 			<!-- <p style="color: green">Congratulations on entering the correct PIN!</p> -->
@@ -321,7 +319,13 @@
 			<p style="color: red">Incorrect sequence entered, no points earned!</p>
 		{/if}
 		<br />
-		{#await get_points()}
+		{#if show_pin}
+			<div style="word-wrap:normal">
+				<p style="">Entered Sequence: {binaryToDUArray(userEnteredPass)}</p>
+			</div>
+		{/if}
+		<br />
+		<!-- {#await get_points()}
 			<p>Fetching points...</p>
 		{:then get_points_value}
 			{#if get_points_value.uid !== null}
@@ -332,13 +336,13 @@
 		{:catch error}
 			{(console.log(error), '')}
 			<p style="color: purple">Network Error: Unable to fetch points!</p>
-		{/await}
+		{/await} -->
 		<br />
 		<button on:click={() => (show_pin = !show_pin)}>Toggle Visibility of Entered Sequence</button>
-		<br />
+		<br/>
 		<button on:click={reset}>Play Again</button>
 		<br />
-		<button><a href="https://142.93.219.243.nip.io/">Checkout Other Games</a></button>
+		<!-- <button><a href="https://142.93.219.243.nip.io/">Checkout Other Games</a></button> -->
 		<!-- <p>{markov_authenticate(SONG_TO_ACTUAL_SEQ[song],userEnteredPass)}</p> -->
 	{:else}
 		<p>shouldn't show up</p>
