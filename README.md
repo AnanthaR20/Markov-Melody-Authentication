@@ -1,6 +1,5 @@
 # Markov Melody Authentication
 You can **demo** this Password entry method [HERE](https://ananthar20.github.io/Markov-Melody-Authentication/)
-Using user id: 'lrs'
 
 This is a relatively novel idea for a mneumonic password, where a user maps a song or melody that they know to a long binary string using a binary variant of [Parsons Code](https://en.wikipedia.org/wiki/Parsons_code#:~:text=The%20Parsons%20code%2C%20formally%20named,of%20Tunes%20and%20Musical%20Themes.).
 
